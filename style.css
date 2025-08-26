@@ -11,6 +11,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    
 }
 
 
@@ -130,7 +131,7 @@ body{
 
 .smoke-effect span{
     position: relative;
-    background-color: white;
+    background-color: rgb(195, 195, 195);
     border-radius: 50%;
     bottom: 25px;
     width: 7px;
@@ -142,7 +143,7 @@ body{
 
 .container:hover .smoke-effect span{
     opacity: 1;
-    animation: foranime 10s linear 0s infinite; 
+    animation: foranime 5s linear 0s infinite; 
     animation-delay: calc(var(--smoke)*-0.5s);
 }
 
@@ -150,26 +151,18 @@ body{
 
 @keyframes foranime{
      0%{
-        transform: translateY(0) scaleX(1);
+        transform: translateY() scaleX(2);
         opacity: 0;
      }
 
      15%{
         
-        opacity: 2;
-     }
-
-     50%{
-        transform: translateY(-250px)scaleX(5);
-        opacity: 0;
-     }
-
-     95%{
-        opacity: 0;
+        opacity: 1;
      }
 
      100%{
-        transform: translateY(-300px)scaleX(10);
-        opacity:0;
+        transform: translateY(-150px)scaleX(4);
+        opacity: 0;
      }
+
 }
